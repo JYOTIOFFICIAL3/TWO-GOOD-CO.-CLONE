@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'Futura';
+    src: url(./Futura-Bold.ttf);
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url(./Gilroy-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+#nav {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgb(238, 233, 233);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#page1 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 20vh;
+}
+
+#page1 h1 {
+    font-size: 15.8vw;
+    text-transform: uppercase;
+    font-family: "futura";
+    line-height: 14vw;
+    letter-spacing: -8px;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: "futura";
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#text {
+    margin-top: 5vw;
+    display: flex;
+    padding: 0 1vw;
+    justify-content: space-between; 
+}
+
+#text h3 {
+    font: inherit;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.5em;
+    opacity: 0.9;
+}
+
+#line {
+    width: 98%;
+    height: 1.4px;
+    background-color: #000000;
+    margin: 0 1vw;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets {
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color:rgb(229, 240, 214);
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+}
+
+#page2 .elem .dets .dots {
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+#page2 .elem .dets .semi {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 4px 0px 0px;
+    letter-spacing: 0.06em;
+    line-height: .9em;
+    font-weight: 100;
+    opacity: 0.9;
+}
+
+#page2 .elem .dets .semi-bold {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 4px 0px 0px;
+    letter-spacing: 0.06em;
+    line-height: .9em;
+}
+
+#brandtext1 {
+    display: flex;
+    justify-content: space-between;
+}
+#brandtext1 #lefttext {
+    padding-left: 2vw;
+    padding-top: 3vw;
+    width: 60%;
+    align-items: start;
+    padding-bottom: 5vw;
+}
+
+#brandtext1 #lefttext h1 {
+    font-size: 4.5vw;
+    font-family: "Futura";
+    line-height: 1em;
+}
+
+#brandtext1 #righttext {
+    padding-top: 1vw;
+    padding-left: 2vw;
+    align-items: start;
+    width: 40%;
+    padding-bottom: 5vw;
+}
+
+#brandtext1 #righttext h3 {
+    font-size: 16px;
+    font-weight: 50;
+    line-height: 1.5em;
+    padding: 2vw;
+}
+#brandtext1 #righttext h4 {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 1.5em;
+    padding-left: 2vw;
+    padding-bottom: 2px;
+    opacity: 0.9;
+}
+
+#line1 {
+    width: 22%;
+    height: 1.4px;
+    background-color: #000000;
+    margin-left: 2vw;
+}
+
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child {
+    height: 56vh;
+    width: 38vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vw;
+}
+
+.child img {
+    height: 100%;
+    object-fit: cover ;
+}
+
+.child h3 {
+    font: inherit;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.child .hd {
+    padding-bottom: 1vw;
+    padding-top: 0.5vw;
+    opacity: 0.8;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#page4 h1 {
+    width: 100%;
+    font-size: 5.5vw;
+    font-family: "Futura";
+    line-height: 1em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#page4 button {
+    position: absolute;
+    font-family: "Futura";
+    background-color: #000000;
+    border-radius: 50px;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    margin-top: 60%;
+    margin-left: 27%;
+    padding: 20px 70px;
+}
+
+#page4 p {
+    line-height: 1em;
+    position: absolute;
+    text-align: center;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0vw 2vw;
+    margin-top: 40vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page5 #leftside {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#page5 #leftside h3 {
+    font-size: 24px;
+    font-family: "Futura";
+}
+
+#page5 #leftside p {
+    font: inherit;
+    opacity: 0.9;
+    line-height: 1.6em;
+    padding: 1.2vw 1px;
+}
+
+#page5 #leftside h5 {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 50;
+    opacity: 0.8;
+    padding: 1vw;
+    line-height: 0.5em;
+}
+
+#line2 {
+    width: 38%;
+    height: 1.2px;
+    background-color: #000000;
+    margin-left: 1vw;
+}
+
+#page5 #rightside {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page5 #rightside #pimg {
+    height: 95%;
+    margin: 0 1vw;
+    width: 50%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+#pimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#etext {
+    margin-top: 5vw;
+    display: flex;
+    padding: 0 2vw;
+    justify-content: space-between; 
+    color: #000;
+}
+
+#etext h1 {
+    font-family: "Futura";
+    text-transform: uppercase;
+    font-size: 3.1vw;
+    line-height: 1em;
+    opacity: 0.9;
+}
+
+#etext i {
+    font-size: 25px;
+    font-weight: 100;
+    padding-right: 1vw;
+}
+
+#eline {
+    width: 98%;
+    height: 1.4px;
+    background-color: #000000;
+    margin: 1vw 2vw;
+    opacity: 0.3;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vw 0;
+}
+
+#footer #fpart1 {
+    padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer #fpart1 h4 {
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1em;
+    opacity: 0.7;
+    padding-bottom: 15px;
+}
+
+#footer #fpart1 h3 {
+    padding: 5px 2px;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+#footer #fpart3 {
+    padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#footer #fpart3 h4 {
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1em;
+    opacity: 0.7;
+    padding-bottom: 15px;
+}
+
+#footer #fpart3 h3 {
+    padding: 5px 2px;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+#twogoodlogo2 {
+    width: 100%;
+    height: 18vw;
+}
+
+#c {
+    background-color: #333;
+    color: #F7F7F7;
+    border-radius: 8px;
+    padding-left: 35%;
+    padding-bottom: 3vw;
+    align-items: center;
+}
+
+
+
+
+
+
+/* @media (max-width:600px) {
+    #page1 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1 {
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    #video-container #play {
+        padding: 9.5vw 7.2vw;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vw 3vw;
+        justify-content: space-between;
+    }
+    
+    #page2 .elem {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+
+    #page2 .elem .dets {
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: rgb(229, 156, 186);
+
+    }
+
+    #page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        height: 54vh;
+        width: 88vw;
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child img {
+        height: 100%;
+    }
+} */
+
+
+
+
